@@ -57,7 +57,7 @@ function AdminPageProductTable(props: { productList: IAdminProductList[] }) {
                 })
                
               } else {
-                swal("Silme işlemi iptal edildi.");
+                swal("Silme işlemi iptal edildi!");
               }
             });
     }
