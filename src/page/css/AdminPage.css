@@ -1,0 +1,78 @@
+body {
+  padding-top: 50px;
+  margin: 0; /* Sayfa kenar boşluklarını sıfırlıyoruz */
+  display: flex;
+  height: 100vh; /* Ekran yüksekliği kadar */
+  flex-direction: row;
+}
+
+.main-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  position: fixed;  /* Sayfa kaydırıldıkça sabit kalır */
+  top: 50px;  /* Header'ın altında sabit kalması için */
+  left: 0;
+  width: 250px; /* Sabit genişlik */
+  max-width: 250px; /* Genişlik sınırlaması */
+  z-index: 1000;
+  background-color: #f39c12; /* Sidebar turuncu */
+  padding: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow-x: hidden;
+  overflow-y: auto; /* Yatay kaydırma yok, dikey kaydırma var */
+  border-right: 1px solid #eee;
+  height: 100vh; /* Sayfa boyutunda yükseklik */
+}
+
+.sidebar .list-group-item {
+  border-radius: 0;
+}
+.bg-warning{
+  width: 250px;
+}
+
+.sidebar .nav-link {
+  color: #f2f2f2;
+  border-radius: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f2f2f2;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+
+.main-content {
+  flex-grow: 1; /* İçerik alanı büyür */
+  padding-left: 20px; /* Sidebar ile mesafe */
+  padding-top: 50px; /* Header mesafesi */
+  margin-left: 250px; /* Sidebar'dan mesafe bırakır */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+
+.main-content {
+  flex-grow: 1; /* İçerik alanı büyür */
+  padding-left: 20px; /* Sidebar ile mesafe */
+  padding-top: 50px; /* Header mesafesi */
+}
+.sidebar .list-group-item {
+  padding: 10px 20px;
+  border-radius: 0;
+}
